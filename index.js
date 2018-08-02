@@ -66,15 +66,14 @@ class Employer{
     let delivs = this.employees().map(empl => {
       return empl.deliveries()
     })
-    console.log(delivs)
+
     let merge = []
     delivs.forEach(del => {
       del.forEach(d => 
         merge.push(d)
       )
     })
-    
-     console.log(merge)
+
   
     return merge
   }
