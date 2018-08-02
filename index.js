@@ -87,6 +87,8 @@ class Employer{
   mealTotals(mealId){
     let allMeals = this.deliveries().map(delivery =>  delivery.meal());
     let x = allMeals.reduce((t,v) => {
+      console.log(mealId)
+      console.log(v.id)
     if(mealId === v.id){
       return t + 1
     }}, 0)
