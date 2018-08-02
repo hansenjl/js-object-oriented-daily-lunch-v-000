@@ -84,9 +84,12 @@ class Employer{
     return meals.filter((v, i, a) => a.indexOf(v) === i)
   }
   
-  mealTotals(){
+  mealTotals(mealId){
     let allMeals = this.deliveries().map(delivery =>  delivery.meal());
-    allMeals
+    allMeals.reduce((t,v) => {
+    if(mealId === v.id){
+      return t + 1
+    }}, 0)
   }
 }
 
