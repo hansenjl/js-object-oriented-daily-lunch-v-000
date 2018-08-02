@@ -87,7 +87,7 @@ class Employer{
     let allMeals = this.deliveries().map(delivery =>  delivery.meal());
     let totals = {}
     allMeals.forEach((m) => {
-      console.log(totals[m.id])
+      if (totals[m.id] )
     })
   }
 }
