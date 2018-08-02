@@ -87,7 +87,11 @@ class Employer{
     let allMeals = this.deliveries().map(delivery =>  delivery.meal());
     let totals = {}
     allMeals.forEach((m) => {
-      if (totals[m.id] )
+      if (totals[m.id]){
+        totals[m.id] += 1 
+      }else{
+        totals[m.id] = 1 
+      }
     })
   }
 }
