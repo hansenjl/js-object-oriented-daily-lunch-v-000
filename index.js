@@ -93,7 +93,7 @@ class Employer{
         totals[m.id] = 1 
       }
     })
-    console.log(totals)
+    return totals
   }
 }
 
